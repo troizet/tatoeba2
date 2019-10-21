@@ -32,8 +32,7 @@ if (isset($sentence->highlight)) {
 ?>
 <div ng-cloak
      sentence-and-translations
-     class="sentence-and-translations"
-     md-whiteframe="1">
+     class="sentence-and-translations md-whiteframe-1dp">
     <div layout="column">
         <md-subheader>
             <?php
@@ -78,6 +77,9 @@ if (isset($sentence->highlight)) {
                     <?= __('This sentence is not reliable.') ?>
                 </md-tooltip>
             <?php } ?>
+            
+            <?= $this->element('sentence_buttons/audio', ['sentence' => $sentence]); ?>
+
             <md-button class="md-icon-button" href="<?= $sentenceUrl ?>">
                 <md-icon>info</md-icon>
             </md-button>

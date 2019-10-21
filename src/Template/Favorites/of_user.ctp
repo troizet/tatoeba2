@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $username = h($username);
@@ -48,7 +48,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
 </div>
 
 <div id="main_content">
-    <div class="module" id="favorites-list" data-success="<?php echo __("Favorite successfully removed."); ?>" >
+    <div class="section md-whiteframe-1dp" id="favorites-list" data-success="<?php echo __("Favorite successfully removed."); ?>" >
 
     <?php
     if (!$userExists) {

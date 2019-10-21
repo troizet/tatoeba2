@@ -4,15 +4,17 @@
 # 
 # Translators:
 # gillux, 2019
+# Ricardo14 <rvj1444@gmail.com>, 2019
+# Ricardo14 <rvj1444@gmail.com>, 2019
 # Trang, 2016
 # Irriep Nala Novram <allannkorh@yahoo.fr>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Tatoeba Website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-27 12:17+0000\n"
-"PO-Revision-Date: 2019-04-27 13:06+0000\n"
-"Last-Translator: Trang\n"
+"POT-Creation-Date: 2019-07-07 13:40+0000\n"
+"PO-Revision-Date: 2019-08-30 21:55+0000\n"
+"Last-Translator: Ricardo14 <rvj1444@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/tatoeba/tatoeba_website/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,7 +60,7 @@ msgstr "; masc-sing: russe; fém-plur: russes; seul: Russe"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L241
 msgid "Mandarin Chinese"
-msgstr ""
+msgstr "; masc-sing: chinois mandarin; fém-plur: chinois mandarin; seul: Chinois mandarin "
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L242
 msgid "Korean"
@@ -114,7 +116,7 @@ msgstr "; masc-sing: suédois; fém-plur: suédoises; seul: Suédois"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L255
 msgid "Norwegian Bokmål"
-msgstr ""
+msgstr "; masc-sing: norvégien bokmål; fém-plur: norvégien bokmål; seul: Norvégien bokmål "
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L256
 msgid "Malay"
@@ -198,7 +200,7 @@ msgstr "; masc-sing: ouzbek; fém-plur: ouzbèkes; seul: Ouzbek"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L277
 msgid "Norwegian Nynorsk"
-msgstr ""
+msgstr "; masc-sing: nynorsk norvégien; fém-plur: nynorsk norvégien; seul: Nynorsk norvégien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L278
 msgid "Serbian"
@@ -338,7 +340,7 @@ msgstr "; masc-sing: malayalam; fém-plur: malayalames; seul: Malayalam"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L312
 msgid "Low German (Low Saxon)"
-msgstr ""
+msgstr "; masc-sing: bas allemand; fém-plur: bas alemand; seul: Bas allemand"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L313
 msgid "Klingon"
@@ -566,7 +568,7 @@ msgstr "; masc-sing: moyen anglais; fém-plur: en moyen anglais; seul: Moyen ang
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L369
 msgid "Middle French"
-msgstr "; masc-sing: moyen français; fém-plur: en moyen français; seul: moyen français"
+msgstr "; masc-sing: moyen français; fém-plur: en moyen français; seul: Moyen français"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L370
 msgid "Haitian Creole"
@@ -686,7 +688,7 @@ msgstr "; masc-sing: nogaï; fém-plur: en nogaï; seul: Nogaï"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L399
 msgid "Yakut"
-msgstr "; masc-sing: iakoute; fém-plur: iakoutes; seul: Iakoute"
+msgstr "; masc-sing: iakoute; fém-plur: iakoutes; seul: Lakoute"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L400
 msgid "Abkhaz"
@@ -758,7 +760,7 @@ msgstr "; masc-sing: tigrigna; fém-plur: en tigrigna; seul: Tigrigna"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L417
 msgid "Northern Sami"
-msgstr "; masc-sing: same du Nord; fém-plur: en same du Nord; seul: Same du Nord"
+msgstr "; masc-sing: same du nord; fém-plur: en same du nord; seul: Same du Nord"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L418
 msgid "North Moluccan Malay"
@@ -770,19 +772,19 @@ msgstr "; masc-sing: pampangan; fém-plur: pampanganes; seul: Pampangan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L420
 msgid "Central Dusun"
-msgstr "Dusun du Centre"
+msgstr "; masc-sing: dusun du centre; fém-plur: dusun du centre; seul: Dusun du Centre"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L421
 msgid "Choctaw"
-msgstr "Choctaw"
+msgstr "; masc-sing: choctaw; fém-plur: choctaw; seul: Choctaw"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L422
 msgid "Coastal Kadazan"
-msgstr "Coastal Kadazan"
+msgstr "; masc-sing: kadazan côtier; fém-plur: kadazan côtier; seul: Kadazan côtier"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L423
 msgid "Samoan"
-msgstr "samoan"
+msgstr "; masc-sing:  samoan; fém-plur:  samoan; seul: Samoan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L424
 msgid "Fijian"
@@ -790,7 +792,7 @@ msgstr "; masc-sing: fidjien; fém-plur: fidjiennes; seul: Fidjien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L425
 msgid "Wolof"
-msgstr "Wolof"
+msgstr "; masc-sing: wolof; fém-plur: wolof; seul: Wolof"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L426
 msgid "Chechen"
@@ -798,23 +800,23 @@ msgstr "; masc-sing: tchétchène; fém-plur: tchétchènes; seul: Tchétchène"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L427
 msgid "Sango"
-msgstr "Sango"
+msgstr "; masc-sing: sango; fém-plur: sango; seul: Sango"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L428
 msgid "Fiji Hindi"
-msgstr "Fiji Hindi"
+msgstr "; masc-sing: fidji hindi; fém-plur: fidji hindi; seul: Fidji hindi"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L429
 msgid "Tongan"
-msgstr "Tongan"
+msgstr "; masc-sing: tongan; fém-plur: tongan; seul: Tongan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L430
 msgid "Ngeq "
-msgstr "Ngeq "
+msgstr "; masc-sing: ngeq; fém-plur: ngeq; seul: Ngeq "
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L431
 msgid "Kamba"
-msgstr "Kamba"
+msgstr "; masc-sing: kamba; fém-plur: kamba; seul: Kamba"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L432
 msgid "Venetian"
@@ -826,15 +828,15 @@ msgstr "; masc-sing: birman; fém-plur: birmanes; seul: Birman"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L434
 msgid "Gilbertese"
-msgstr "gilbertin"
+msgstr "; masc-sing: gilbertin; fém-plur: gilbertin; seul: Gilbertin"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L435
 msgid "Erzya"
-msgstr "Erzya"
+msgstr "; masc-sing: erzya; fém-plur: erzya; seul: Erzya"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L436
 msgid "Niuean"
-msgstr "niuéen"
+msgstr "; masc-sing: niuéen; fém-plur: niuéennes; seul: Niuéen"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L437
 msgid "Võro"
@@ -846,11 +848,11 @@ msgstr "; masc-sing: mannois; fém-plur: mannoises; seul: Mannois"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L439
 msgid "Lingala"
-msgstr "Lingala"
+msgstr "; masc-sing: lingala; fém-plur: lingala; seul: Lingala"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L440
 msgid "Lingua Franca Nova"
-msgstr "Lingua Franca Nova"
+msgstr "; masc-sing: lingua franca nova; fém-plur: lingua franca nova; seul: Lingua Franca Nova"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L441
 msgid "Pashto"
@@ -858,11 +860,11 @@ msgstr "; masc-sing: pachtoune; fém-plur: pachtounes; seul: Pachtoune"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L442
 msgid "Khakas"
-msgstr "Khakas"
+msgstr "; masc-sing: khakas; fém-plur: khakas; seul: Khakas"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L443
 msgid "Dungan"
-msgstr "Dungan"
+msgstr "; masc-sing: dungan; fém-plur: dungan; seul: Dungan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L444
 msgid "Friulian"
@@ -870,7 +872,7 @@ msgstr "; masc-sing: frioulan; fém-plur: frioulanes; seul: Frioulan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L445
 msgid "Marshallese"
-msgstr "marshallais"
+msgstr "; masc-sing: marshallais; fém-plur: marshallais; seul: Marshallais"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L446
 msgid "Palatine German"
@@ -878,11 +880,11 @@ msgstr "; masc-sing: francique rhénan; fém-plur: francique rhénanes; seul: Fr
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L447
 msgid "Kannada"
-msgstr "Kannada"
+msgstr "; masc-sing: kannada; fém-plur: kannada; seul: Kannada"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L448
 msgid "Seychellois Creole"
-msgstr "Créole Seychellois"
+msgstr "; masc-sing: créole seychellois; fém-plur: créole seychellois; seul: Créole seychellois"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L449
 msgid "Swiss German"
@@ -890,7 +892,7 @@ msgstr "; masc-sing: suisse alémanique; fém-plur: suisse alémaniques; seul: S
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L450
 msgid "Old Saxon"
-msgstr "vieux saxon"
+msgstr "; masc-sing: vieux saxon; fém-plur: vieux saxon; seul: Vieux saxon"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L451
 msgid "Sumerian"
@@ -898,55 +900,55 @@ msgstr "; masc-sing: sumérien; fém-plur: sumériennes; seul: Sumérien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L452
 msgid "Scots"
-msgstr "Ecossais"
+msgstr "; masc-sing: ecossais; fém-plur: ecossais; seul: Ecossais"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L453
 msgid "Mohawk"
-msgstr "Mohawk"
+msgstr "; masc-sing: mohawk; fém-plur: mohawk; seul: Mohawk"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L454
 msgid "Cebuano"
-msgstr "cébouano"
+msgstr "; masc-sing: cébouano; fém-plur: cébouano; seul: Cébouano"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L455
 msgid "Lombard"
-msgstr "Lombard"
+msgstr "; masc-sing: lombard; fém-plur: lombard; seul: Lombard"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L456
 msgid "Tsonga"
-msgstr "Tsonga"
+msgstr "; masc-sing: tsonga; fém-plur: tsonga; seul: Tsonga"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L457
 msgid "Buryat"
-msgstr "bouriate"
+msgstr "; masc-sing: bouriate; fém-plur: bouriate; seul: Bouriate"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L458
 msgid "Aymara"
-msgstr "Aymara"
+msgstr "; masc-sing: aymara; fém-plur: aymara; seul: Aymara"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L459
 msgid "Ilocano"
-msgstr "Ilocano"
+msgstr "; masc-sing: ilocano; fém-plur: ilocano; seul: Ilocano"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L460
 msgid "Karakalpak"
-msgstr "Karakalpak"
+msgstr "; masc-sing: karakalpak; fém-plur: karakalpak; seul: Karakalpak"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L461
 msgid "Orizaba Nahuatl"
-msgstr "Orizaba Nahuatl"
+msgstr "; masc-sing: orizaba nahuatl; fém-plur: orizaba nahuatl; seul: Orizaba nahuatl"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L462
 msgid "Guerrero Nahuatl"
-msgstr "Guerrero Nahuatl"
+msgstr "; masc-sing: guerrero nahuatl; fém-plur: guerrero nahuatl; seul: Guerrero nahuatl"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L463
 msgid "Adyghe"
-msgstr "adyguéen"
+msgstr "; masc-sing: adyguéen; fém-plur: adyguéen; seul: Adyguéen"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L464
 msgid "Bodo"
-msgstr "Bodo"
+msgstr "; masc-sing: bodo; fém-plur: bodo; seul: Bodo"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L465
 msgid "Gagauz"
@@ -954,43 +956,43 @@ msgstr "; masc-sing: gagaouze; fém-plur: gagaouzes; seul: Gagaouze"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L466
 msgid "Romani"
-msgstr "Romani"
+msgstr "; masc-sing: romani; fém-plur: romani; seul: Romani"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L467
 msgid "Laz"
-msgstr "Laz"
+msgstr "; masc-sing: laz; fém-plur: laz; seul: Laz"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L468
 msgid "Pulaar"
-msgstr "Pulaar"
+msgstr "; masc-sing: pulaar; fém-plur: pulaar; seul: Pulaar"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L469
 msgid "Umbundu"
-msgstr "Umbundu"
+msgstr "; masc-sing: umbundu; fém-plur: umbundu; seul: Umbundu"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L470
 msgid "Tokelauan"
-msgstr "Tokelauan"
+msgstr "; masc-sing: tokelauan; fém-plur: tokelauan; seul: Tokelauan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L471
 msgid "Southern Sotho"
-msgstr "Sotho du Sud"
+msgstr "; masc-sing: sotho du sud; fém-plur: sotho du sud; seul: Sotho du sud"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L472
 msgid "Southern Altai"
-msgstr "Altai du Sud"
+msgstr "; masc-sing: altai du sud; fém-plur: altai du sud; seul: Altai du sud"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L473
 msgid "Waray"
-msgstr "waray-waray"
+msgstr "; masc-sing: waray-waray; fém-plur: waray-waray; seul: Waray-waray"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L474
 msgid "Sindhi"
-msgstr "Sindhi"
+msgstr "; masc-sing: sindhi; fém-plur: sindhi; seul: Sindhi"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L475
 msgid "Setswana"
-msgstr "Setswana"
+msgstr "; masc-sing: setswana; fém-plur: setswana; seul: Setswana"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L476
 msgid "Sardinian"
@@ -998,27 +1000,27 @@ msgstr "; masc-sing: sarde; fém-plur: sardes; seul: Sarde"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L477
 msgid "Palauan"
-msgstr "Palauan"
+msgstr "; masc-sing: palauan; fém-plur: palauan; seul: Palauan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L478
 msgid "Garhwali"
-msgstr "Garhwali"
+msgstr "; masc-sing: garhwali; fém-plur: garhwali; seul: Garhwali"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L479
 msgid "Ojibwe"
-msgstr "ojibwé"
+msgstr "; masc-sing: ojibwé; fém-plur: ojibwé; seul: Ojibwé"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L480
 msgid "Luganda"
-msgstr "Luganda"
+msgstr "; masc-sing: luganda; fém-plur: luganda; seul: Luganda"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L481
 msgid "Hakka Chinese"
-msgstr "hakka"
+msgstr "; masc-sing: hakka; fém-plur: hakka; seul: Hakka"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L482
 msgid "Bambara"
-msgstr "Bambara"
+msgstr "; masc-sing: bambara; fém-plur: bambara; seul: Bambara"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L483
 msgid "Aragonese"
@@ -1030,11 +1032,11 @@ msgstr "; masc-sing: assamais; fém-plur: assamaises; seul: Assamais"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L485
 msgid "Nigerian Fulfulde"
-msgstr "Fulfulde du Niger"
+msgstr "; masc-sing: fulfulde du Niger; fém-plur: fulfulde du Niger; seul: Fulfulde du Niger"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L486
 msgid "Ho"
-msgstr "Ho"
+msgstr "; masc-sing: ho; fém-plur: ho; seul: Ho"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L487
 msgid "Sundanese"
@@ -1042,31 +1044,31 @@ msgstr "; masc-sing: soundanais; fém-plur: soundanaises; seul: Soundanais"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L488
 msgid "North Levantine Arabic"
-msgstr "arabe levantin septentrional"
+msgstr "; masc-sing: arabe levantin septentrional; fém-plur: arabe levantin septentrional; seul: Arabe levantin septentrional"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L489
 msgid "Tuvinian"
-msgstr "touvinien"
+msgstr "; masc-sing: touvinien; fém-plur: touvinien; seul: Touvinien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L490
 msgid "Karachay-Balkar"
-msgstr "Karachay-Balkar"
+msgstr "; masc-sing: karachay-balkar; fém-plur:  karachay-balkar; seul: Karachay-Balkar"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L491
 msgid "Papiamento"
-msgstr "papiamento"
+msgstr "; masc-sing: papiamento; fém-plur: papiamento; seul: Papiamento"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L492
 msgid "Old Norse"
-msgstr "vieux norrois"
+msgstr "; masc-sing: vieux norrois; fém-plur: vieux norrois; seul: Vieux norrois"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L493
 msgid "Odia (Oriya)"
-msgstr "Odia (Oriya)"
+msgstr "; masc-sing: odia (oriya); fém-plur: odia (oriya); seul: Odia (oriya)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L494
 msgid "Iban"
-msgstr "Iban"
+msgstr "; masc-sing: iban; fém-plur: iban; seul: Iban"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L495
 msgid "Old Aramaic"
@@ -1074,19 +1076,19 @@ msgstr "; masc-sing: araméen; fém-plur: arméennes; seul: Araméen"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L496
 msgid "Moroccan Arabic"
-msgstr "Arabe Marocain"
+msgstr "; masc-sing: arabe marocain; fém-plur: arabe marocain; seul: Arabe marocain"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L497
 msgid "Cuyonon"
-msgstr "Cuyonon"
+msgstr "; masc-sing: cuyonon; fém-plur: cuyonon; seul: Cuyonon"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L498
 msgid "Igbo"
-msgstr "Igbo"
+msgstr "; masc-sing: igbo; fém-plur: igbo; seul: Igbo"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L499
 msgid "Kashubian"
-msgstr "cachoube"
+msgstr "; masc-sing: cachoube; fém-plur: cachoube; seul: Cachoube"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L500
 msgid "Louisiana Creole"
@@ -1094,19 +1096,19 @@ msgstr "; masc-sing: créole de Louisiane; fém-plur: créoles de Louisiane; seu
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L501
 msgid "Urhobo"
-msgstr "Urhobo"
+msgstr "; masc-sing: urhobo; fém-plur: urhobo; seul: Urhobo"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L502
 msgid "Tagal Murut"
-msgstr "Tagal Murut"
+msgstr "; masc-sing: tagal murut; fém-plur: tagal murut; seul: Tagal murut"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L503
 msgid "Moksha"
-msgstr "Moksha"
+msgstr "; masc-sing: XXXX; fém-plur: moksha; seul: Moksha"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L504
 msgid "Pangasinan"
-msgstr "Pangasinan"
+msgstr "; masc-sing: pangasinan; fém-plur: pangasinan; seul: Pangasinan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L505
 msgid "Corsican"
@@ -1114,7 +1116,7 @@ msgstr "; masc-sing: corse; fém-plur: corses; seul: Corse"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L506
 msgid "Hmong Njua (Green)"
-msgstr "Hmong Njua (Vert)"
+msgstr "; masc-sing: hmong njua (vert); fém-plur: hmong njua (vert); seul: Hmong njua (vert)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L507
 msgid "Tarifit"
@@ -1122,15 +1124,15 @@ msgstr "; masc-sing: rifain; fém-plur: rifaines; seul: Rifain"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L508
 msgid "Central Huasteca Nahuatl"
-msgstr " Huasteca Nahuatl du centre"
+msgstr "; masc-sing: huasteca nahuatl du centre; fém-plur: huasteca nahuatl du centre; seul: Huasteca nahuatl du centre"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L509
 msgid "Kekchi (Q'eqchi')"
-msgstr "Kekchi (Q'eqchi')"
+msgstr "; masc-sing: kekchi (q'eqchi'); fém-plur: kekchi (q'eqchi'); seul: Kekchi (Q'eqchi')"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L510
 msgid "Swazi"
-msgstr "Swazi"
+msgstr "; masc-sing: swazi; fém-plur: swazi; seul: Swazi"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L511
 msgid "Balinese"
@@ -1138,127 +1140,127 @@ msgstr "; masc-sing: balinais; fém-plur: balinaises; seul: Balinais"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L512
 msgid "Assyrian Neo-Aramaic"
-msgstr "Assyrien Neo-Aramaique"
+msgstr "; masc-sing: assyrien neo-aramaique; fém-plur: assyrien neo-aramaique; seul: Assyrien neo-aramaique"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L513
 msgid "Tuvaluan"
-msgstr "Tuvaluan"
+msgstr "; masc-sing: tuvaluan; fém-plur: tuvaluan; seul: Tuvaluan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L514
 msgid "Keningau Murut"
-msgstr "Keningau Murut"
+msgstr "; masc-sing: keningau murut; fém-plur: keningau murut; seul: Keningau murut"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L515
 msgid "Baybayanon"
-msgstr "Baybayanon"
+msgstr "; masc-sing: baybayanon; fém-plur: baybayanon; seul: Baybayanon"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L516
 msgid "Morisyen"
-msgstr "Morisien"
+msgstr "; masc-sing: morisien; fém-plur: morisiennes; seul: Morisien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L517
 msgid "Hmong Daw (White)"
-msgstr "Hmong Daw (Blanc)"
+msgstr "; masc-sing: hmong daw (blanc); fém-plur: hmong daw (blanc); seul: Hmong daw (blanc)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L518
 msgid "Central Bikol"
-msgstr ""
+msgstr "; masc-sing: bikol central; fém-plur: bikol central; seul: Bikol central"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L519
 msgid "Nauruan"
-msgstr "Nauruan"
+msgstr "; masc-sing: nauruan; fém-plur: nauruan; seul: Nauruan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L520
 msgid "Malay (Vernacular)"
-msgstr "Malay (Vernaculaire)"
+msgstr "; masc-sing: malay (vernaculaire); fém-plur: malay (vernaculaire); seul: Malay (vernaculaire)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L521
 msgid "Naga (Tangshang)"
-msgstr "Naga (Tangshang)"
+msgstr "; masc-sing: naga (tangshang); fém-plur: naga (tangshang); seul: Naga (tangshang)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L522
 msgid "K'iche'"
-msgstr "K'iche'"
+msgstr "; masc-sing: k'iche'; fém-plur: k'iche'; seul: K'iche'"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L523
 msgid "Gulf Arabic"
-msgstr ""
+msgstr "; masc-sing: arabe du Golfe; fém-plur: arabe du Golfe; seul: Arabe du Golfe"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L524
 msgid "Minangkabau"
-msgstr "Minangkabau"
+msgstr "; masc-sing: minangkabau; fém-plur: minangkabau; seul: Minangkabau"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L525
 msgid "Temuan"
-msgstr "Temuan"
+msgstr "; masc-sing: temuan; fém-plur: temuan; seul: Temuan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L526
 msgid "Chinese (Jin)"
-msgstr "Chinois (jin)"
+msgstr "; masc-sing: chinois (jin); fém-plur: chinois (jin); seul: Chinois (jin)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L527
 msgid "Maithili"
-msgstr "Maithili"
+msgstr "; masc-sing: maithili; fém-plur: maithili; seul: Maithili"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L528
 msgid "Madurese"
-msgstr "Madurese"
+msgstr "; masc-sing: madurese; fém-plur: madurese; seul: Madurese"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L529
 msgid "Banjar"
-msgstr "Banjar"
+msgstr "; masc-sing: banjar; fém-plur: banjar; seul: Banjar"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L530
 msgid "Gothic"
-msgstr "Gothic"
+msgstr "; masc-sing: gotique; fém-plur: gotique; seul: Gotique"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L531
 msgid "Xiang Chinese"
-msgstr "Xiang"
+msgstr "; masc-sing: chinois xiang; fém-plur: chinois xiang; seul: Chinois xiang"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L532
 msgid "Gan Chinese"
-msgstr "Gan"
+msgstr "; masc-sing: chinois gan; fém-plur: chinois gan; seul: Chinois gan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L533
 msgid "Bavarian"
-msgstr "Bavarian"
+msgstr "; masc-sing: bavarois; fém-plur: bavarois; seul: Bavarois"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L534
 msgid "Talossan"
-msgstr "Talossien"
+msgstr "; masc-sing: talossien; fém-plur: talossien; seul: Talossien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L535
 msgid "Samogitian"
-msgstr "Samogitien"
+msgstr "; masc-sing: samogitien; fém-plur: samogitien; seul: Samogitien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L536
 msgid "Láadan"
-msgstr "Láadan"
+msgstr "; masc-sing: láadan; fém-plur: láadan; seul: Láadan"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L537
 msgid "Dutton World Speedwords"
-msgstr "Speedwords monde de Dutton"
+msgstr "; masc-sing: speedwords monde de dutton; fém-plur: speedwords monde de dutton; seul: Speedwords monde de Dutton"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L538
 msgid "Afrihili"
-msgstr "Afrihili"
+msgstr "; masc-sing: afrihili; fém-plur: afrihili; seul: Afrihili"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L539
 msgid "Karelian"
-msgstr "Karelien"
+msgstr "; masc-sing: carélien; fém-plur: carélien; seul: Carélien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L540
 msgid "Veps"
-msgstr "Veps"
+msgstr "; masc-sing: vepse; fém-plur: vepse; seul: Vepse"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L541
 msgid "Rusyn"
-msgstr "Rusyn"
+msgstr "; masc-sing: rusyn (ruthène); fém-plur: rusyn (ruthène); seul: Rusyn (ruthène)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L542
 msgid "Tahitian"
-msgstr "Tahitien"
+msgstr "; masc-sing: tahitien; fém-plur: tahitien; seul: Tahitien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L543
 msgid "Talysh"
@@ -1282,7 +1284,7 @@ msgstr "; masc-sing: ingrien; fém-plur: ingriennes; seul: Ingrien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L548
 msgid "Southern Sami"
-msgstr "; masc-sing: same du Sud; fém-plur: en same du Sud; seul: Same du Sud"
+msgstr "; masc-sing: same du sud; fém-plur: en same du sud; seul: Same du Sud"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L549
 msgid "Jamaican Patois"
@@ -1298,15 +1300,15 @@ msgstr "; masc-sing: komi-zyriène; fém-plur: komi-zyriènes; seul: Komi-zyriè
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L552
 msgid "Central Mnong"
-msgstr ""
+msgstr "; masc-sing: mnong (central); fém-plur: mnong (central); seul: Mnong (central)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L553
 msgid "Komi-Permyak"
-msgstr ""
+msgstr "; masc-sing: komi-permiak; fém-plur: komi-permiak; seul: Komi-permiak"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L554
 msgid "Inuktitut"
-msgstr ""
+msgstr "; masc-sing: inuktitut; fém-plur: inuktitut; seul: Inuktitut"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L555
 msgid "Kabyle"
@@ -1314,68 +1316,80 @@ msgstr "; masc-sing: kabyle; fém-plur: kabyles; seul: Kabyle"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L556
 msgid "Kirundi"
-msgstr ""
+msgstr "; masc-sing: kirundi; fém-plur: kirundi; seul: Kirundi"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L557
 msgid "Gheg Albanian"
-msgstr ""
+msgstr "; masc-sing: guègue albanais; fém-plur: guègue albanais; seul: Guègue albanais"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L558
 msgid "Aklanon"
-msgstr ""
+msgstr "; masc-sing: aklanon (akeanon); fém-plur: aklanon (akeanon); seul: Aklanon (akeanon)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L559
 msgid "Manchu"
-msgstr ""
+msgstr "; masc-sing: mandchou; fém-plur: mandchou; seul: Mandchou"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L560
 msgid "Kashmiri"
-msgstr ""
+msgstr "; masc-sing: cachemiri (kashmiri); fém-plur: cachemiri (kashmiri); seul: Cachemiri (kashmiri)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L561
 msgid "Old Turkish"
-msgstr ""
+msgstr "; masc-sing: vieux turc; fém-plur: vieux turc; seul: Vieux turc"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L562
 msgid "Uab Meto"
-msgstr ""
+msgstr "; masc-sing: uab meto; fém-plur: uab meto; seul: Uab meto"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L563
 msgid "Tachawit"
-msgstr ""
+msgstr "; masc-sing: tachawit; fém-plur: tachawit; seul: Tachawit"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L564
 msgid "Kven Finnish"
-msgstr ""
+msgstr "; masc-sing: kven finlandais; fém-plur: kven finlandais; seul: Kven finlandais"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L565
 msgid "Rapa Nui"
-msgstr ""
+msgstr "; masc-sing: rapanui; fém-plur: rapanui; seul: Rapanui"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L566
 msgid "Guadeloupean Creole French"
-msgstr ""
+msgstr "; masc-sing: créole guadeloupéen; fém-plur: créole guadeloupéen; seul: Créole guadeloupéen"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L567
 msgid "Gronings"
-msgstr ""
+msgstr "; masc-sing: groningois; fém-plur: groningois; seul: Groningois"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L568
 msgid "Ligurian"
-msgstr ""
+msgstr "; masc-sing: ligure (ligurien); fém-plur: ligure (ligurien); seul: Ligure (ligurien)"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L569
 msgid "Tigre"
-msgstr ""
+msgstr "; masc-sing: tigré; fém-plur: tigré; seul: Tigré"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L570
 msgid "Tahaggart Tamahaq"
-msgstr ""
+msgstr "; masc-sing: tamahaq; fém-plur: tamahaq; seul: Tamahaq"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L571
-msgid "Hunsrik"
-msgstr ""
+msgid "Dhivehi"
+msgstr "; masc-sing:  maldivien; fém-plur:  maldiviennes; seul: Maldivien"
 
 #: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L572
+msgid "Hunsrik"
+msgstr "; masc-sing: hunsrik; fém-plur: hunsrik; seul: Hunsrik"
+
+#: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L573
 msgid "Cayuga"
-msgstr ""
+msgstr "; masc-sing: cayuga; fém-plur: cayuga; seul: Cayuga"
+
+#: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L574
+msgid "Ga"
+msgstr "; masc-sing: ga (gä); fém-plur: ga (gä); seul: Ga (gä)"
+
+#: github.com/Tatoeba/tatoeba2/tree/dev/src/Lib/LanguagesLib.php#L575
+msgid "Chinese Pidgin English"
+msgstr "; masc-sing: pidgin anglais chinois; fém-plur: pidgin anglais chinois; seul: Pidgin anglais chinois"

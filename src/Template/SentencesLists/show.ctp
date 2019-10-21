@@ -22,12 +22,11 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 use App\Model\CurrentUser;
 use App\Model\Entity\SentencesList;
 
-$this->Sentences->javascriptForAJAXSentencesGroup();
 $this->Html->script(
     JS_PATH . 'sentences_lists.remove_sentence_from_list.js', array('block' => 'scriptBottom')
 );
@@ -36,7 +35,6 @@ $listCount = $this->Paginator->param('count');
 $listId = $list['id'];
 $listVisibility = $list['visibility'];
 $listName = h($list['name']);
-$maxCountForDownload = SentencesList::MAX_COUNT_FOR_DOWNLOAD;
 
 $this->set('title_for_layout', $this->Pages->formatTitle($listName));
 ?>
@@ -44,7 +42,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($listName));
 <div id="annexe_content">
     <?php $this->Lists->displayListsLinks(); ?>
 
-    <div class="module">
+    <div class="section md-whiteframe-1dp">
         <h2><?php echo __('About this list'); ?></h2>
         <?php
         $linkToAuthorProfile = $this->Html->link(
@@ -70,7 +68,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($listName));
                 $listCount,
                 true
             ),
-            array('n' => $listCount)
+            array('n' => $this->Number->format($listCount))
         );
         echo $this->Html->tag('p', $numberOfSentencesMsg);
         ?>
@@ -80,7 +78,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($listName));
     <?php
     if ($permissions['canEdit']) {
         ?>
-        <div class="module">
+        <div class="section md-whiteframe-1dp">
             <h2><?php echo __('Options'); ?></h2>
             <ul class="sentencesListActions">
                 <?php
@@ -97,7 +95,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($listName));
     }
     ?>
 
-    <div class="module">
+    <div class="section md-whiteframe-1dp">
     <h2><?php echo __('Actions'); ?></h2>
     <?php
     $this->Lists->displayTranslationsDropdown($listId, $translationsLang);
@@ -108,30 +106,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($listName));
             $this->Lists->displayDeleteButton($listId);
         }
 
-        if ($permissions['canDownload']) {
-            $this->Lists->displayDownloadLink($listId);
-        } else {
-            $firstSentence = __n('The download feature has been disabled for '.
-                'this list because it contains a sentence.',
-                'The download feature has been disabled for '.
-                'this list because it contains {n}&nbsp;sentences.',
-                $listCount, true);
-
-            $secondSentence = __n('Only lists containing one sentence or fewer can be '.
-                'downloaded. If you can edit the list, you may want '.
-                'to split it into multiple lists.',
-                'Only lists containing {max} or fewer sentences can be '.
-                'downloaded. If you can edit the list, you may want '.
-                'to split it into multiple lists.',
-                $maxCountForDownload, true);
-
-            echo $this->Html->tag(
-                'div', format($firstSentence, array('n' => $listCount))
-            );
-            echo $this->Html->tag(
-                'div', format($secondSentence, array('max' => $maxCountForDownload))
-            );
-        }
+        $this->Lists->displayDownloadLink($listId);
         ?>
     </div>
     </div>
@@ -172,9 +147,6 @@ $this->set('title_for_layout', $this->Pages->formatTitle($listName));
         echo $this->Html->div('edit-list-name', $editImage);
         $this->Lists->displayAddSentenceForm($listId);
     }
-
-    $this->Pagination->display();
-
     ?>
 
     <div class="sortBy" id="sortBy">
@@ -189,6 +161,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($listName));
     <div class="sentencesList" id="sentencesList"
          data-list-id="<?php echo $listId; ?>">
     <?php
+    $this->Pagination->display();
     if (!CurrentUser::isMember() || CurrentUser::getSetting('use_new_design')) {
         foreach ($sentencesInList as $item) {
             $sentence = $item->sentence;
@@ -203,6 +176,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($listName));
             );
         }
     } else {
+        $this->Sentences->javascriptForAJAXSentencesGroup();
         foreach ($sentencesInList as $item) {
             $sentence = $item->sentence;
             $this->Lists->displaySentence(

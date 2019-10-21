@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   Allan SIMON <allan.simon@supinfo.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 namespace App\View\Helper;
 
@@ -37,7 +37,7 @@ use App\View\Helper\AppHelper;
  * @package  Helpers
  * @author   SIMON Allan <allan.simon@supinfo.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 class CommonModulesHelper extends AppHelper
@@ -61,7 +61,7 @@ class CommonModulesHelper extends AppHelper
     public function createFilterByLangMod($maxNumberOfParams = 1)
     {
         ?>
-        <div class="section" layout="column" md-whiteframe="1">
+        <div class="section md-whiteframe-1dp" layout="column">
             <h2><?php echo __('Filter by language'); ?></h2>
             <?php
             /*to stay on the same page except language filter option*/

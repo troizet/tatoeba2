@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 /**
@@ -32,34 +32,38 @@
  * @package  Views
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $this->set('title_for_layout', $this->Pages->formatTitle(__('Members')));
 ?>
 
 <div id="annexe_content">
-    <div class="module">
+    <div class="section md-whiteframe-1dp">
     <h2><?php echo __('Search user') ?></h2>
     <?php
     $this->Security->enableCSRFProtection();
-    echo $this->Form->create('User', array(
-        "url" => array("action" => "search")
-    ));
-    echo $this->Form->input(
-        'username',
-        array(
-            "id" => "usernameInput",
-            "label" => "",
-        )
-    );
-    echo $this->Form->submit(__('search'));
+    echo $this->Form->create('User', ['url' => ['action' => 'search']]);
+    ?>
+    
+    <md-input-container layout="column">
+        <?php
+        echo $this->Form->input('username',[
+            'id' => 'usernameInput',
+            'label' => '',
+        ]);
+        ?>
+        <md-button type="submit" class="md-raised">
+            <?= __('Search') ?>
+        </md-button>
+    </md-input-container>
+
+    <?php
     echo $this->Form->end();
     $this->Security->disableCSRFProtection();
     ?>
     </div>
 
-    <div class="module">
     <?php
     echo $this->element(
         'currently_active_members',
@@ -68,11 +72,10 @@ $this->set('title_for_layout', $this->Pages->formatTitle(__('Members')));
         )
     );
     ?>
-    </div>
 </div>
 
 <div id="main_content">
-    <div class="module">
+    <div class="section">
         <h2>
         <?php
         echo $this->Paginator->counter(
@@ -109,7 +112,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle(__('Members')));
             $userImage = $user->image;
         };
         ?>
-        <div class="user <?php echo $status ?>">
+        <div class="user <?php echo $status ?> md-whiteframe-1dp">
             <div class="image">
                 <?php echo $this->Members->image($username, $userImage); ?>
             </div>

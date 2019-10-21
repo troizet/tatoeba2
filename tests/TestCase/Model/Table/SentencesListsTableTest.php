@@ -40,7 +40,6 @@ class SentencesListsTableTest extends TestCase {
             'canEdit' => true,
             'canAddSentences' => true,
             'canRemoveSentences' => true,
-            'canDownload' => true
         );
         $this->assertEquals($expected, $list['Permissions']);
     }
@@ -52,7 +51,6 @@ class SentencesListsTableTest extends TestCase {
             'canEdit' => false,
             'canAddSentences' => false,
             'canRemoveSentences' => false,
-            'canDownload' => true
         );
         $this->assertEquals($expected, $list['Permissions']);
     }
@@ -157,13 +155,26 @@ class SentencesListsTableTest extends TestCase {
         $this->assertEmpty($list);
     }
 
-    function testAddSentenceToList_succeeds() {
+    function testAddSentenceToList_succeedsForOwnList() {
         $before = $this->SentencesList->SentencesSentencesLists->find()
             ->where(['sentence_id' => 12, 'sentences_list_id' => 1])
             ->count();
         $result = $this->SentencesList->addSentenceToList(12, 1, 7);
         $after = $this->SentencesList->SentencesSentencesLists->find()
             ->where(['sentence_id' => 12, 'sentences_list_id' => 1])
+            ->count();
+
+        $this->assertTrue($result);
+        $this->assertEquals(1, $after - $before);
+    }
+
+    function testAddSentenceToList_succeedsForCollaborativeList() {
+        $before = $this->SentencesList->SentencesSentencesLists->find()
+            ->where(['sentence_id' => 12, 'sentences_list_id' => 5])
+            ->count();
+        $result = $this->SentencesList->addSentenceToList(12, 5, 7);
+        $after = $this->SentencesList->SentencesSentencesLists->find()
+            ->where(['sentence_id' => 12, 'sentences_list_id' => 5])
             ->count();
 
         $this->assertTrue($result);
@@ -317,21 +328,27 @@ class SentencesListsTableTest extends TestCase {
                 '2' => 'Public list',
                 '3' => 'Private list'
             ],
-            'Collaborative' => []
+            'Collaborative' => [
+                '5' => 'Collaborative list'
+            ]
         ];
         $this->assertEquals($expected, $result);
     }
 
     function testGetSearchableLists_asGuests() {
         CurrentUser::store(['id' => null]);
-        $result = $this->SentencesList->getSearchableLists();
-        $this->assertEquals([2], Hash::extract($result, '{n}.id'));
+        $lists = $this->SentencesList->getSearchableLists();
+        $result = Hash::extract($lists, '{n}.id');
+        $expected = [2, 5];
+        $this->assertEquals(asort($expected), asort($result));
     }
 
     function testGetSearchableLists_asMember() {
         CurrentUser::store(['id' => 7]);
-        $result = $this->SentencesList->getSearchableLists();
-        $this->assertEquals([1, 3, 2], Hash::extract($result, '{n}.id'));
+        $lists = $this->SentencesList->getSearchableLists();
+        $result = Hash::extract($lists, '{n}.id');
+        $expected = [1, 3, 2, 5];
+        $this->assertEquals(asort($expected), asort($result));
     }
 
     function testGetNameForListWithId() {
@@ -341,14 +358,14 @@ class SentencesListsTableTest extends TestCase {
 
     function testGetNumberOfSentences() {
         $result = $this->SentencesList->getNumberOfSentences(1);
-        $this->assertEquals(2, $result);
+        $this->assertEquals(3, $result);
     }
 
     function testGetSentencesAndTranslationsOnly_withoutTranslations() {
         $result = $this->SentencesList->getSentencesAndTranslationsOnly(1);
         $ids = Hash::extract($result, '{n}.id');
         $texts = Hash::extract($result, '{n}.text');
-        $this->assertEquals([4, 8], $ids);
+        $this->assertEquals([4, 8, 55], $ids);
         $this->assertEquals(count($ids), count($texts));
     }
 

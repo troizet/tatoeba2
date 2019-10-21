@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   Allan SIMON <allan.simon@supinfo.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 namespace App\View\Helper;
 
@@ -37,7 +37,7 @@ use App\View\Helper\AppHelper;
  * @package  Helpers
  * @author   SIMON Allan <allan.simon@supinfo.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 class ShowAllHelper extends AppHelper
@@ -135,7 +135,7 @@ class ShowAllHelper extends AppHelper
     public function displayShowAllInSelect($selectedLanguage)
     {
         ?>
-        <div class="module">
+        <div class="section md-whiteframe-1dp">
             <h2><?php echo __('Sentences in:'); ?></h2>
             <?php
             $langs = $this->Languages->unknownLanguagesArray();
@@ -161,7 +161,7 @@ class ShowAllHelper extends AppHelper
     public function displayShowOnlyTranslationInSelect($selectedLanguage = 'none')
     {
         ?>
-        <div class="module">
+        <div class="section md-whiteframe-1dp">
             <h2><?php echo __('Show translations in:'); ?></h2>
             <?php
             $langs = $this->Languages->languagesArrayForPositiveLists();

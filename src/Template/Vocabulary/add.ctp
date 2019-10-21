@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 ?>
 <?php
@@ -36,7 +36,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
 <div ng-cloak id="annexe_content">
     <?php echo $this->element('vocabulary/menu'); ?>
 
-    <div class="section" layout="column" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp" layout="column">
         <h2><?= __('Tips'); ?></h2>
         <p><?= __(
             'Add vocabulary that you are learning. If your vocabulary does not '.
@@ -48,7 +48,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
 
 <div ng-controller="VocabularyAddController as ctrl" id="main_content">
 
-    <div class="section" layout="column" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp" layout="column">
         <h2><?= $title ?></h2>
         <?= $this->Form->create('Vocabulary', [
             'ng-cloak' => true,
@@ -100,7 +100,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
 
     </div>
 
-    <div ng-cloak class="section" md-whiteframe="1">
+    <div ng-cloak class="section md-whiteframe-1dp">
         <div layout="row">
             <h2 flex><?= __('Vocabulary items added'); ?></h2>
             <md-progress-circular md-mode="indeterminate"

@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 namespace App\Lib;
 
@@ -573,6 +573,8 @@ class LanguagesLib
                 'cay' => __d('languages', 'Cayuga'),
                 'gaa' => __d('languages', 'Ga'),
                 'cpi' => __d('languages', 'Chinese Pidgin English'),
+                'bzt' => __d('languages', 'Brithenig'),
+                'ltg' => __d('languages', 'Latgalian'),
             );
         }
         return $languages;

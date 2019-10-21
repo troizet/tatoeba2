@@ -356,9 +356,10 @@ class SentencesTable extends Table
     }
 
     public function findFilteredTranslations($query, $options) {
-        $translationLanguages = CurrentUser::getLanguages();
         if (!empty($options['translationLang']) && $options['translationLang'] != 'und') {
-            $translationLanguages[] = $options['translationLang'];
+            $translationLanguages = [$options['translationLang']];
+        } else {
+            $translationLanguages = CurrentUser::getLanguages();
         }
         return $query->formatResults(function($results) use ($translationLanguages) {
             return $results->map(function($result) use ($translationLanguages) {
@@ -650,6 +651,18 @@ class SentencesTable extends Table
             ),
             'Translations' => array(
                 'IndirectTranslations' => array(),
+                'Audios' => array(
+                    'Users' => array('fields' => array('username')),
+                    'fields' => array('user_id', 'external', 'sentence_id'),
+                ),
+            ),
+            'Audios' => array(
+                'Users' => array('fields' => array(
+                    'username',
+                    'audio_license',
+                    'audio_attribution_url',
+                )),
+                'fields' => array('user_id', 'external', 'sentence_id'),
             ),
         );
 
@@ -1043,7 +1056,7 @@ class SentencesTable extends Table
         $prevLang = $sentence->lang;
         $currentUserId = CurrentUser::get('id');
 
-        if ($ownerId == $currentUserId || CurrentUser::isModerator()) {
+        if (($ownerId == $currentUserId || CurrentUser::isModerator()) && !$this->hasAudio($sentence->id)) {
 
             // Making sure the language is not saved as an empty string but as NULL.
             if ($newLang == '' ) {

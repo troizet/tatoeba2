@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 /**
@@ -32,7 +32,7 @@
  * @package  Views
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 use \Cake\Controller\Component\AuthComponent;
@@ -73,7 +73,7 @@ echo $this->Form->create(
 );
 
 ?>
-<div md-whiteframe="1" id="login-form">
+<div id="login-form" class="md-whiteframe-1dp">
   <h2><?= __('Log in'); ?></h2>
   <div ng-cloak>
     <md-input-container class="md-block">

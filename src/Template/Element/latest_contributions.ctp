@@ -22,13 +22,13 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 use Cake\ORM\TableRegistry;
 
 $contributions = TableRegistry::get('Contributions')->getLastContributions(10);
 ?>
-<md-list id="logs">
+<md-list id="logs" class="md-whiteframe-1dp">
 <?php
 $this->Logs->obsoletize($contributions);
 foreach ($contributions as $contribution) {

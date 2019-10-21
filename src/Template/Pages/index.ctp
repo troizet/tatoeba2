@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 use Cake\Core\Configure;
 
@@ -42,32 +42,39 @@ $selectedLanguage = $this->request->getSession()->read('random_lang_selected');
     ));
     ?>
         
-    <div class="module">
-        <h2><?php echo __('Latest messages'); ?></h2>
+    <md-list class="annexe-menu md-whiteframe-1dp">
+        <md-subheader><?= __('Latest messages'); ?></md-subheader>
+
         <?php
         foreach ($latestMessages as $message) {
             $messageOwner = $message->user->username;
             $messageContent = $message->content;
             $messageDate = $message->date;
             $messageId = $message->id;
-            
-            $this->Wall->messagePreview(
-                $messageId, $messageOwner, $messageContent, $messageDate
-            );
-            
+            ?>
+            <md-list-item>
+                <p>
+                <?php 
+                $this->Wall->messagePreview(
+                    $messageId, $messageOwner, $messageContent, $messageDate
+                );
+                ?>
+                </p>
+            </md-list-item>
+            <?php            
         }
         ?>
-    </div>
+    </md-list>
     
 </div>
 
 <div id="main_content">
     <?php if(!isset($searchProblem) && !$hideRandomSentence) { ?>
-        <div class="module">
+        <div class="section">
             <?php echo $this->element('random_sentence_header'); ?>
             <div class="random_sentences_set">
                 <md-progress-circular md-mode="indeterminate" class="block-loader" id="random-progress" style="display: none;"></md-progress-circular>
-                <div id="random_sentence_display">
+                <div id="random_sentence_display" class="md-whiteframe-1dp">
                     <?php
                     $this->Sentences->displaySentencesGroup($random);
                     ?>

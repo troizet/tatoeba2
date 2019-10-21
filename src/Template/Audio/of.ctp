@@ -36,7 +36,7 @@ if (isset($sentencesWithAudio)) {
     );
 
     if (CurrentUser::get('username') == $username): ?>
-        <div class="section" md-whiteframe="1">
+        <div class="section md-whiteframe-1dp">
             <h2><?php echo __('My audio'); ?></h2>
             <?php
                echo $this->Form->create($audioSettings, array(
@@ -71,7 +71,7 @@ if (isset($sentencesWithAudio)) {
 ?>
 
 <div id="main_content">
-<div class="module">
+<div class="section md-whiteframe-1dp">
 <?php
 if (isset($sentencesWithAudio)) {
     if (count($sentencesWithAudio) == 0) {

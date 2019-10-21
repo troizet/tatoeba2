@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 namespace App\View\Helper;
 
@@ -40,11 +40,11 @@ use App\Model\Entity\Language;
  * @package  Helpers
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 class LanguagesHelper extends AppHelper
 {
-    public $helpers = array('Html', 'Url');
+    public $helpers = array('Html', 'Url', 'Number');
 
     /* Memoization of languages code and their localized names */
     private $__languages_alone;
@@ -382,7 +382,9 @@ class LanguagesHelper extends AppHelper
     function stat($langCode, $numberOfSentences, $link)
     {
         $flagImage = $this->icon($langCode);
-        $numberOfSentencesHtml = '<span class="total">'.$numberOfSentences.'</span>';
+        $numberOfSentencesHtml = '<span class="total">' .
+                                 $this->Number->format($numberOfSentences) .
+                                 '</span>';
 
         if (empty($langCode)) {
             $langCode = 'unknown';

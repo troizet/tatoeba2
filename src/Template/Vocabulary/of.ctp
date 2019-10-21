@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 ?>
 <?php
@@ -31,7 +31,7 @@ $this->Html->script('/js/vocabulary/of.ctrl.js', ['block' => 'scriptBottom']);
 $count = $this->Paginator->param('count');
 $title = format(
     __("{username}'s vocabulary items ({number})", $count),
-    array('username' => $username, 'number' => $count)
+    array('username' => $username, 'number' => $this->Number->format($count))
 );
 
 $this->set('title_for_layout', $this->Pages->formatTitle($title));
@@ -44,7 +44,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
 </div>
 
 <div id="main_content" ng-controller="VocabularyOfController as ctrl">
-    <div class="section" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp">
         <h2><?= $title ?></h2>
 
         <?php

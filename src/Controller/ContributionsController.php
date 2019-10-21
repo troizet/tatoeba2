@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 namespace App\Controller;
 
@@ -37,7 +37,7 @@ use Cake\I18n\Time;
  * @package  Controllers
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 class ContributionsController extends AppController
 {
@@ -63,29 +63,9 @@ class ContributionsController extends AppController
      *
      * @return void
      */
-    public function index($filter = 'und')
+    public function index($filter = null)
     {
-        $this->helpers[] = 'Pagination';
-
-        $conditions = [];
-        if ($filter != 'und') {
-            $conditions = array('sentence_lang' => $filter);
-        }
-
-        $this->paginate = [
-            'conditions' => $conditions,
-            'contain' => [
-                'Users' => [
-                    'fields' => ['username', 'image']
-                ]
-            ],
-            'limit' => 200,
-            'order' => ['id' => 'DESC'],
-        ];
-        $contributions = $this->paginate();
-
-        $this->set('contributions', $contributions);
-        $this->set('langFilter', $filter);
+        return $this->redirect(['action' => 'latest', $filter]);
     }
 
 
@@ -187,10 +167,12 @@ class ContributionsController extends AppController
                 ]
             ],
             'limit' => 200,
-            'order' => ['id' => 'DESC'],
+            'order' => ['Contributions.id' => 'DESC'],
         ];
-        $contributions = $this->paginate();
+        $totalLimit = $this::PAGINATION_DEFAULT_TOTAL_LIMIT;
+        $contributions = $this->paginateLatest($this->Contributions, $totalLimit);
         $this->set('contributions', $contributions);
         $this->set('userExists', true);
+        $this->set('totalLimit', $totalLimit);
     }
 }

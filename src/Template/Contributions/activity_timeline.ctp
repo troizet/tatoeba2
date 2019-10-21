@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 /**
@@ -33,7 +33,7 @@
  * @package  Views
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $this->set('title_for_layout', $this->Pages->formatTitle(__("Activity timeline")));
@@ -89,7 +89,7 @@ foreach ($stats as $stat) {
 
         echo '<tr>';
         echo $this->Html->tag('td', $date, array('class' => 'date'));
-        echo $this->Html->tag('td', $numSentences, array('class' => 'number'));
+        echo $this->Html->tag('td', $this->Number->format($numSentences), array('class' => 'number'));
         echo $this->Html->tag('td', $bar, array('class' => 'bar'));
         echo '</tr>';
 
@@ -112,7 +112,7 @@ foreach ($stats as $stat) {
                 $dailyAverage,
                 true
             ),
-            array('n' => $dailyAverage)
+            array('n' => $this->Number->format($dailyAverage))
         );
         echo $this->Html->div("daily-average", $averageString);
     }

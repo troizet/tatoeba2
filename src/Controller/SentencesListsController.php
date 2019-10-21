@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 namespace App\Controller;
 
@@ -39,7 +39,7 @@ use App\Model\Entity\SentencesList;
  * @package  Controllers
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 class SentencesListsController extends AppController
 {
@@ -405,18 +405,6 @@ class SentencesListsController extends AppController
                 __('You do not have permission to download this list.')
             );
             return $this->redirect(array('action' => 'index'));
-        }
-
-        $count = $this->SentencesLists->getNumberOfSentences($listId);
-        if ($count > SentencesList::MAX_COUNT_FOR_DOWNLOAD)
-        {
-            $this->flash(
-                __(
-                    'This list cannot be downloaded '.
-                    'because it contains too many sentences.'
-                ),
-                array('action' => 'show', $listId)
-            );
         }
 
         $listName = $this->SentencesLists->getNameForListWithId($listId);

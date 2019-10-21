@@ -22,10 +22,10 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
- $total = $this->Paginator->param('count');
+$total = $this->Paginator->counter('{{count}}');
 if (empty($filter)) {
     if (!empty($isCollaborative)) {
         $title = __('Collaborative lists ({total})');
@@ -58,9 +58,8 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
 </div>
 
 <div id="main_content">
-    <div class="module">
+    <div class="section md-whiteframe-1dp">
         <?php echo $this->Html->tag('h2', $title, array('escape' => true)); ?>
-
         <div class="sortBy">
             <strong><?php echo __("Sort by:") ?> </strong>
             <?php

@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 use App\Model\CurrentUser;
 
@@ -38,47 +38,41 @@ $vocabularyUrl = $this->Url->build(array(
 ?>
 
 <div id="annexe_content">
-    <div class="section" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp">
     <h2><?php echo __('Important'); ?></h2>
     <p>
     <?php
     echo __(
-        'Please do not forget <strong>capital letters</strong> '.
-        'and <strong>punctuation</strong>! Thank you.'
+        "<strong>We like quality.</strong> Every detail matters. ".
+        "Please do not forget punctuation and capital letters."
     );
     ?>
     </p>
 
     <p>
     <?php
-    echo format(
-        __(
-            'Do not copy-paste sentences from elsewhere, '.
-            'except if the content is CC-BY compatible. '.
-            '<a href="{}">Learn more...</a>', true
-        ),
-        'http://blog.tatoeba.org/2011/01/legally-valid-content.html'
+    echo __(
+        "<strong>We like diversity.</strong> Unleash your creativity! ".
+        "Avoid using the same words, names, topics, or patterns over and over again."
     );
     ?>
     </p>
-    </div>
 
-    <div class="section" md-whiteframe="1">
-    <h2><?php echo __('Tips'); ?></h2>
     <p>
-        <?php
-        echo __(
-            "You can add sentences that you do not know how to translate. ".
-            "Perhaps someone else will know!"
-        );
-        ?>
+    <?php
+    echo __(
+        "<strong>We like sharing our data.</strong> Avoid copy-pasting sentences, ".
+        "or at least make sure they are not copyrighted and are compatible with the CC BY license. ".
+        "Otherwise we cannot use them."
+    );
+    ?>
     </p>
     </div>
 </div>
 
 <div id="main_content">
 
-    <div class="section" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp">
         <h2><?php echo __('Add new sentences'); ?></h2>
 
         <?php
@@ -158,7 +152,7 @@ $vocabularyUrl = $this->Url->build(array(
 
     </div>
 
-    <div class="section" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp">
         <h2><?php echo __('Sentences added'); ?></h2>
 
         <div class="sentencesAddedloading" style="display:none">
@@ -176,7 +170,7 @@ $vocabularyUrl = $this->Url->build(array(
         </div>
     </div>
 
-    <div ng-cloak class="section" md-whiteframe="1">
+    <div ng-cloak class="section md-whiteframe-1dp">
         <div layout="column" layout-align="center center">
             <?= __('Check out the vocabulary for which we need sentences'); ?>
             <md-button class="md-primary" href="<?= $vocabularyUrl ?>">

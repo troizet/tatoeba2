@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 $username = h($username);
 $this->set('title_for_layout', $this->Pages->formatTitle(
@@ -41,7 +41,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle(
 
 
 <div id="main_content">
-<div class="module">
+<div class="section">
     <h2>
     <?php 
     echo $this->Paginator->counter(

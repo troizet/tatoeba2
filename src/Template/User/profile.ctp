@@ -23,7 +23,7 @@
  * @package  Tatoeba
  * @author   BEN YAALA Salem <salem.benyaala@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 use App\Model\CurrentUser;
 
@@ -34,7 +34,7 @@ use App\Model\CurrentUser;
  * @package  View
  * @author   BEN YAALA Salem <salem.benyaala@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $dateFormat = 'Y-m-d';
@@ -70,19 +70,19 @@ $this->set('title_for_layout', h($this->Pages->formatTitle($title)));
     );
     ?>
 
-    <div class="section" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp">
         <h2><?php echo __('Stats'); ?></h2>
         <dl>
             <dt><?php echo __('Comments posted'); ?></dt>
-            <dd><?php echo $userStats['numberOfComments']; ?></dd>
+            <dd><?php echo $this->Number->format($userStats['numberOfComments']); ?></dd>
             <dt><?php echo __('Sentences owned'); ?></dt>
-            <dd><?php echo $userStats['numberOfSentences']; ?></dd>
+            <dd><?php echo $this->Number->format($userStats['numberOfSentences']); ?></dd>
             <dt><?php echo __('Audio recordings'); ?></dt>
-            <dd><?php echo $userStats['numberOfAudios']; ?></dd>
+            <dd><?php echo $this->Number->format($userStats['numberOfAudios']); ?></dd>
             <dt><?php echo __('Sentences favorited'); ?></dt>
-            <dd><?php echo $userStats['numberOfFavorites']; ?></dd>
+            <dd><?php echo $this->Number->format($userStats['numberOfFavorites']); ?></dd>
             <dt><?php echo __('Contributions'); ?></dt>
-            <dd><?php echo $userStats['numberOfContributions']; ?></dd>
+            <dd><?php echo $this->Number->format($userStats['numberOfContributions']); ?></dd>
         </dl>
 
         <div>
@@ -102,7 +102,7 @@ $this->set('title_for_layout', h($this->Pages->formatTitle($title)));
     <?php
     if ($isDisplayed) {
         ?>
-        <div class="section" md-whiteframe="1">
+        <div class="section md-whiteframe-1dp">
             <h2><?php echo __('Settings'); ?></h2>
 
             <ul class="annexeMenu">
@@ -168,7 +168,7 @@ $this->set('title_for_layout', h($this->Pages->formatTitle($title)));
 </div>
 
 <div id="main_content">
-    <div ng-cloak id="profile" class="section with-title-button" layout="column" md-whiteframe="1">
+    <div ng-cloak id="profile" class="section with-title-button md-whiteframe-1dp" layout="column">
 
         <div layout="row" class="header">
             <div>
@@ -303,7 +303,7 @@ $this->set('title_for_layout', h($this->Pages->formatTitle($title)));
         ?>
     </div>
 
-    <div ng-cloak class="section with-title-button" md-whiteframe="1">
+    <div ng-cloak class="section with-title-button md-whiteframe-1dp">
         <div layout="row" layout-align="start center">
             <h2 flex><?= __('Languages'); ?></h2>
             <?php

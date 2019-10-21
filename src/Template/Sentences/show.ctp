@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 use App\Model\CurrentUser;
 
@@ -57,21 +57,22 @@ if (isset($sentence)) {
     $this->set('title_for_layout', $this->Pages->formatTitle(
         __('Sentence does not exist: ') . $this->request->params['pass'][0]
     ));
+    $sentenceId = $this->request->params['pass'][0];
 }
 
 
 // navigation (previous, random, next)
-$this->Navigation->displaySentenceNavigation(
-    $sentenceId,
-    $nextSentence,
-    $prevSentence
-);
+echo $this->element('/sentences/navigation', [
+    'currentId' => $sentenceId,
+    'next' => $nextSentence,
+    'prev' => $prevSentence
+]);
 ?>
-
+<br>
 <div id="annexe_content">
     <?php
     if (CurrentUser::get('settings.users_collections_ratings')) {
-        echo '<div class="module correctness-info">';
+        echo '<div class="section correctness-info md-whiteframe-1dp">';
 
         echo $this->Html->tag('h2', __('Reviewed by'));
         foreach($correctnessArray as $correctness) {
@@ -138,7 +139,7 @@ $this->Navigation->displaySentenceNavigation(
     }
     ?>
 
-    <div class="section">
+    <div class="section md-whiteframe-1dp">
         <?php
         echo '<h2>';
         echo __('Logs');
@@ -165,39 +166,38 @@ $this->Navigation->displaySentenceNavigation(
 </div>
 
 <div id="main_content">
-    <div class="module">
-        <?php
-        if (isset($sentence)) {
-        ?>
-            <h2>
-            <?php
-            echo format(__('Sentence #{number}'), array('number' => $sentenceId));
+    <?php
+    if (isset($sentence)) {
+        if (CurrentUser::isMember()) {
             ?>
-            </h2>
-
+            <div class="section md-whiteframe-1dp">
+            <h2><?= format(__('Sentence #{number}'), array('number' => $sentenceId)); ?></h2>
             <?php
-            // display sentence and translations
             $this->Sentences->displaySentencesGroup($sentence);
-
+            ?></div><?php
         } else {
-
-            echo '<h2>' .
-                format(__('Sentence #{number}'),
-                       array('number' => $this->request->params['pass'][0])) .
-                '</h2>';
-
-            echo '<div class="error">';
-                echo format(
-                    __(
-                        'There is no sentence with id {number}',
-                        true
-                    ),
-                    array('number' => $this->request->params['pass'][0])
-                );
-            echo '</div>';
+            echo $this->element(
+                'sentences/sentence_and_translations',
+                array(
+                    'sentence' => $sentence,
+                    'translations' => $sentence->translations,
+                    'user' => $sentence->user
+                )
+            );
         }
-        ?>
-    </div>
+    } else {
+        echo '<div class="error">';
+            echo format(
+                __(
+                    'There is no sentence with id {number}',
+                    true
+                ),
+                array('number' => $this->request->params['pass'][0])
+            );
+        echo '</div>';
+    }
+    ?>
+    <br>
 
     <div class="section">
         <h2><?= __('Comments'); ?></h2>
@@ -205,14 +205,13 @@ $this->Navigation->displaySentenceNavigation(
         if (!empty($sentenceComments)) {
             echo '<div class="comments">';
             foreach ($sentenceComments as $i=>$comment) {
-                $commentId = $comment['SentenceComment']['id'];
                 $menu = $this->Comments->getMenuForComment(
                     $comment,
                     $commentsPermissions[$i],
                     false
                 );
 
-                echo '<a id="comment-'.$commentId.'"></a>';
+                echo '<a id="comment-'.$comment->id.'"></a>';
 
                 echo $this->element(
                     'messages/comment',
@@ -230,13 +229,9 @@ $this->Navigation->displaySentenceNavigation(
         }
 
         if ($canComment) {
-            if(!isset($sentence['Sentence'])) {
-                $sentenceText = __('Sentence deleted');
-            }
-            $this->Comments->displayCommentForm(
-                $sentenceId,
-                $sentenceText
-            );
+            echo $this->element('messages/comment_form', [
+                'sentenceId' => $sentenceId
+            ]);
         }
         ?>
     </div>
@@ -245,7 +240,7 @@ $this->Navigation->displaySentenceNavigation(
 } else {
 ?>
     <div id="main_content">
-        <div class="module">
+        <div class="section">
             <?php
             echo $this->Html->tag('h2', __('Random Sentence'));
             if($searchProblem == 'disabled') {

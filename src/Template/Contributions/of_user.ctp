@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 /**
@@ -30,12 +30,12 @@
  * @package  Views
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $username = h($username);
 if ($userExists) {
-    $title = format(__("Logs of {user}'s contributions"), array('user' => $username));
+    $title = format(__("Latest contributions of {user}"), array('user' => $username));
 } else {
     $title = format(__("There's no user called {username}"), array('username' => $username));
 }
@@ -53,7 +53,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
 </div>
 
 <div id="main_content">
-    <div class="section" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp">
     <?php
     if (!$userExists) {
         $this->CommonModules->displayNoSuchUser($username);
@@ -61,7 +61,11 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
         echo $this->Html->tag('h2', $title);
     
         if (isset($contributions)) {
-            
+            echo $this->Html->tag('p', format(
+                __('Only the last {n} log entries are displayed here.'),
+                ['n' => $this->Number->format($totalLimit)]
+            ));
+
             $this->Pagination->display(['last' => false]);
             ?>
 

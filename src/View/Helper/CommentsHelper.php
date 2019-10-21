@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 namespace App\View\Helper;
 
@@ -37,89 +37,12 @@ use App\View\Helper\AppHelper;
  * @package  Helpers
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 class CommentsHelper extends AppHelper
 {
 
     public $helpers = array('Form', 'Html', 'Sentences', 'Messages', 'Url');
-
-
-    /**
-     * Display form to post a comment.
-     *
-     * @param int $sentenceId   Id of the sentence.
-     * @param int $sentenceText Text of the sentence.
-     *
-     * @return void
-     */
-    public function displayCommentForm($sentenceId, $sentenceText)
-    {
-        echo $this->Form->create('', [
-            'url' => ['controller' => 'sentence_comments', 'action' => 'save'],
-            'class' => 'message form'
-        ]);
-
-        echo $this->Form->hidden('sentence_id', ['value' => $sentenceId]);
-        ?>
-
-        <div class="header">
-            <div class="info">
-            <?php
-            $user = CurrentUser::get('User');
-            $this->Messages->displayAvatar($user);
-            ?>
-            </div>
-            <div class="title">
-            <?php echo __('Add a comment'); ?>
-            </div>
-        </div>
-
-        <div class="body">
-            <div class="textarea">
-            <?php
-            echo $this->Form->textarea(
-                'text',
-                array(
-                    "label"=> "",
-                    "lang" => "",
-                    "dir" => "auto",
-                )
-            );
-            ?>
-            </div>
-
-            <div ng-cloak layout="row" layout-align="end center" layout-padding>
-                <md-button type="submit" class="md-raised md-primary">
-                    <?php echo __('Submit comment'); ?>
-                </md-button>
-            </div>
-        </div>
-        <?php
-        echo $this->Form->end();
-        ?>
-
-
-        <h3><?php echo __('Good practices'); ?></h3>
-        <ul>
-            <li>
-            <?php
-            echo __(
-                'Say "welcome" to new users.'
-            );
-            ?>
-            </li>
-
-            <li>
-            <?php
-            echo __(
-                'Use private messages to discuss things unrelated to the sentence.'
-            );
-            ?>
-            </li>
-        </ul>
-        <?php
-    }
 
 
     /**

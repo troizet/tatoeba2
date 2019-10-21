@@ -22,22 +22,22 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 ?>
 
-<h2><?php echo __('Currently contributing') ?></h2>
+<md-list class="annexe-menu md-whiteframe-1dp">
+<md-subheader><?php echo __('Currently contributing') ?></md-subheader>
 
-<p>
+<p class="hint" style="padding: 0 10px">
 <?php 
 echo format(
     __n('User who did the last contribution.','Users who participated in the last {n}&nbsp;contributions.', $total),
-    array('n' => $total)
+    array('n' => $this->Number->format($total))
 );
 ?>
 </p>
 
-<div>
 <?php
 $highestNumberOfContributions = $currentContributors[0]->total;
 foreach($currentContributors as $i=>$currentContributor){
@@ -45,46 +45,24 @@ foreach($currentContributors as $i=>$currentContributor){
     $percentage = ($numberOfContributions/$total)*100;
     $username = $currentContributor->user->username;
     $userImage = $currentContributor->user->image;
+    $url = $this->Url->build([
+        'controller' => 'contributions',
+        'action' => 'of_user',
+        $username
+    ]);
     ?>
-    <div class="currentContributor">
-        <div class="image">
+    <md-list-item class="md-2-line" href="<?= $url ?>">
+        <?= $this->Members->image($username, $userImage, array('class' => 'md-avatar')); ?>
+        <div class="md-list-item-text" layout="column">
+            <h3><?= $username ?></h3>
+            <p>
             <?php
-            echo $this->Members->image(
-                $username,
-                $userImage
+            echo format(
+                __n('{n}&nbsp;sentence', '{n}&nbsp;sentences', $numberOfContributions, true),
+                ['n' => $this->Number->format($numberOfContributions)]
             );
             ?>
-        </div>
-
-        <div class="info">
-            <div class="username">
-                <?php
-                echo $this->Html->link($username,
-                    array(
-                        "controller" => "contributions",
-                        "action" => "of_user",
-                        $username
-                    )
-                );
-                ?>
-            </div>
-
-
-            <div class="score">
-                <?php
-                echo format(
-                    __n(
-                        '#{rank} - {n}&nbsp;sentence - {percentage}%',
-                        '#{rank} - {n}&nbsp;sentences - {percentage}%',
-                        $numberOfContributions, true),
-                    array(
-                        'rank' => $i + 1,
-                        'n' => $numberOfContributions,
-                        'percentage' => $percentage
-                    )
-                );
-                ?>
-            </div>
+            </p>
         </div>
 
         <div class="activityBar">
@@ -106,8 +84,8 @@ foreach($currentContributors as $i=>$currentContributor){
             // be 2 (0.31*5 = 1.55).
             ?>
         </div>
-    </div>
+    </md-list-item>
     <?php
 }
 ?>
-</div>
+</md-list>

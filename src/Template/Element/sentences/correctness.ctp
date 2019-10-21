@@ -22,13 +22,13 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <trang@tatoeba.org>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 use App\Model\Table\SentencesTable;
 ?>
 
-<div class="module">
+<div class="section md-whiteframe-1dp">
     <h2><?php echo __d('admin', 'Correctness') ?></h2>
     <?php
     echo $this->Form->create(

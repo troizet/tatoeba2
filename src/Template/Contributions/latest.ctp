@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 /**
@@ -32,7 +32,7 @@
  * @package  Views
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $this->set('title_for_layout', $this->Pages->formatTitle(__("Latest contributions")));
@@ -41,22 +41,6 @@ $this->set('title_for_layout', $this->Pages->formatTitle(__("Latest contribution
 <div id="annexe_content">
     <?php $this->CommonModules->createFilterByLangMod(); ?>
 
-    <div class="section" md-whiteframe="1">
-        <h2><?php echo __('View all'); ?></h2>
-        <p>
-        <?php
-        echo $this->Html->link(
-            __('Browse all contributions'),
-            array(
-                'controller' => 'contributions',
-                'action' => 'index'
-            )
-        );
-        ?>
-        </p>
-    </div>
-
-    <div class="module">
     <?php
     echo $this->element(
         'currently_active_members',
@@ -65,11 +49,10 @@ $this->set('title_for_layout', $this->Pages->formatTitle(__("Latest contribution
         )
     );
     ?>
-    </div>
 </div>
 
 <div id="main_content">
-    <div class="section" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp">
         <h2><?php echo __('Latest contributions'); ?></h2>
         <md-list id="logs">
         <?php

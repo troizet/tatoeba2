@@ -938,7 +938,7 @@ class SentencesTableTest extends TestCase {
 
 	function testNumberOfSentencesOwnedBy() {
 		$result = $this->Sentence->numberOfSentencesOwnedBy(7);
-		$this->assertEquals(19, $result);
+		$this->assertEquals(21, $result);
 	}
 
 	function testGetSentenceTextForId_succeeds() {
@@ -963,13 +963,19 @@ class SentencesTableTest extends TestCase {
 	}
 
 	function testChangeLanguage_succeeds() {
-		CurrentUser::store(['id' => 7]);
+		CurrentUser::store($this->Sentence->Users->get(7));
+		$result = $this->Sentence->changeLanguage(1, 'jpn');
+		$this->assertEquals('jpn', $result);
+	}
+
+	function testChangeLanguage_succeedsAsCorpusMaintainter() {
+		CurrentUser::store($this->Sentence->Users->get(2));
 		$result = $this->Sentence->changeLanguage(1, 'jpn');
 		$this->assertEquals('jpn', $result);
 	}
 
 	function testChangeLanguage_failsBecauseNowAllowed() {
-		CurrentUser::store(['id' => 4]);
+		CurrentUser::store($this->Sentence->Users->get(4));
 		$result = $this->Sentence->changeLanguage(1, 'jpn');
 		$this->assertEquals('eng', $result);
 	}
@@ -977,6 +983,12 @@ class SentencesTableTest extends TestCase {
 	function testChangeLanguage_failsBecauseWrongSentenceId() {
 		$result = $this->Sentence->changeLanguage(9999999, 'jpn');
 		$this->assertFalse($result);
+	}
+
+	function testChangeLanguage_failsBecauseAudio() {
+		CurrentUser::store($this->Sentence->Users->get(2));
+		$result = $this->Sentence->changeLanguage(3, 'eng');
+		$this->assertEquals('spa', $result);
 	}
 
 	function testSetOwner_succeeds() {
@@ -1067,15 +1079,29 @@ class SentencesTableTest extends TestCase {
 		$directTranslationsLangs = Hash::extract($result->translations[0], '{n}.lang');
 		$indirectTranslationsLangs = Hash::extract($result->translations[1], '{n}.lang');
 		
-		$languages = array_unique($expected + $directTranslationsLangs + $indirectTranslationsLangs);
-		$this->assertEquals($expected, $languages);
+		$languages = array_unique(array_merge($directTranslationsLangs, $indirectTranslationsLangs));
+		$this->assertEquals(asort($expected), asort($languages));
 	}
 
-	function testFindFilteredTranslations_withoutLangSettings() {
+	function testFindFilteredTranslations_withLangSettingsAndTranslationLang() {
 		$Users = TableRegistry::getTableLocator()->get('Users');
 		$user = $Users->get(4)->toArray();
 		CurrentUser::store($user);
 
+		$result = $this->Sentence->find('filteredTranslations', ['translationLang' => 'jpn'])
+			->where(['Sentences.id' => 1])
+			->contain($this->Sentence->contain())
+			->first();
+		
+		$expected = ['jpn'];
+		$directTranslationsLangs = Hash::extract($result->translations[0], '{n}.lang');
+		$indirectTranslationsLangs = Hash::extract($result->translations[1], '{n}.lang');
+		
+		$languages = array_unique(array_merge($directTranslationsLangs, $indirectTranslationsLangs));
+		$this->assertEquals(asort($expected), asort($languages));
+	}
+
+	function testFindFilteredTranslations_withoutLangSettings() {
 		$result = $this->Sentence->find('filteredTranslations')
 			->where(['Sentences.id' => 1])
 			->contain($this->Sentence->contain())
@@ -1084,9 +1110,9 @@ class SentencesTableTest extends TestCase {
 		$expected = ['fra', 'spa', 'deu', 'cmn', 'jpn'];
 		$directTranslationsLangs = Hash::extract($result->translations[0], '{n}.lang');
 		$indirectTranslationsLangs = Hash::extract($result->translations[1], '{n}.lang');
-		
-		$languages = array_unique($expected + $directTranslationsLangs + $indirectTranslationsLangs);
-		$this->assertEquals($expected, $languages);
+
+		$languages = array_unique(array_merge($directTranslationsLangs, $indirectTranslationsLangs));
+		$this->assertEquals(asort($expected), asort($languages));
 	}
 
 	function testGetSentenceWithId_translationsHaveAudioInfo() {

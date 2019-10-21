@@ -22,16 +22,16 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $title = __('Native speakers');
 $this->set('title_for_layout', $this->Pages->formatTitle($title));
 $membersIcons = array(
-    'status1' => __('Admins'),
-    'status2' => __('Corpus maintainers'),
-    'status3' => __('Advanced contributors'),
-    'status4' => __('Contributors')
+    'status_admin' => __('Admins'),
+    'status_corpus_maintainer' => __('Corpus maintainers'),
+    'status_advanced_contributor' => __('Advanced contributors'),
+    'status_contributor' => __('Contributors')
 );
 ?>
 <div id="annexe_content">
@@ -107,14 +107,14 @@ $membersIcons = array(
 
                 echo '<tr>';
 
-                echo $this->Html->tag('td', $rank);
+                echo $this->Html->tag('td', $this->Number->format($rank));
                 echo $this->Html->tag('td', $languageIcon);
                 echo $this->Html->tag('td', $languageName);
-                echo $this->Html->tag('td', $numAdmins);
-                echo $this->Html->tag('td', $numCorpusMaintainers);
-                echo $this->Html->tag('td', $numAdvancedContributors);
-                echo $this->Html->tag('td', $numContributors);
-                echo $this->Html->tag('td', $total);
+                echo $this->Html->tag('td', $this->Number->format($numAdmins));
+                echo $this->Html->tag('td', $this->Number->format($numCorpusMaintainers));
+                echo $this->Html->tag('td', $this->Number->format($numAdvancedContributors));
+                echo $this->Html->tag('td', $this->Number->format($numContributors));
+                echo $this->Html->tag('td', $this->Number->format($total));
 
                 echo '</tr>';
 

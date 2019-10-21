@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 namespace App\View\Helper;
 
@@ -37,7 +37,7 @@ use Cake\Utility\Hash;
  * @package  Helpers
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 class ListsHelper extends AppHelper
 {
@@ -48,7 +48,8 @@ class ListsHelper extends AppHelper
         'Sentences',
         'Date',
         'Images',
-        'Url'
+        'Url',
+        'Number'
     );
 
     /**
@@ -207,7 +208,7 @@ class ListsHelper extends AppHelper
 
         <td>
             <div class="count" title="<?php echo __('Number of sentences') ?>">
-                <?php echo $count; ?>
+                <?php echo $this->Number->format($count); ?>
             </div>
         </td>
 
@@ -483,7 +484,7 @@ class ListsHelper extends AppHelper
         );
         ?>
 
-        <div id="newSentenceInList">
+        <div id="newSentenceInList" class="section md-whiteframe-1dp">
         <?php
         echo $this->Form->input(
             'text',
@@ -528,7 +529,7 @@ class ListsHelper extends AppHelper
     public function displayListsModule($listsArray)
     {
         if (count($listsArray) > 0) {
-            echo '<div class="module">';
+            echo '<div class="section md-whiteframe-1dp">';
             echo $this->Html->tag('h2', __('Lists'));
             echo '<ul class="sentence-lists">';
             foreach($listsArray as $list) {
@@ -558,20 +559,27 @@ class ListsHelper extends AppHelper
     public function displayCreateListForm()
     {
         ?>
-        <div class="module">
+        <div class="section md-whiteframe-1dp">
             <h2><?php echo __('Create a new list'); ?></h2>
             <?php
-            echo $this->Form->create(
-                'SentencesList',
-                array(
-                    "url" => array("action" => "add"),
-                    "type" => "post",
-                )
-            );
-            echo $this->Form->control('name', [
-                'label' => __x('list', 'Name')
+            echo $this->Form->create('SentencesList', [
+                'url' => ['action' => 'add'],
+                'type' => 'post',
             ]);
-            echo $this->Form->button(__('create'));
+            ?>
+            
+            <md-input-container layout="column">
+                <?php
+                echo $this->Form->control('name', [
+                    'label' => __x('list', 'Name')
+                ]);
+                ?>
+                <md-button type="submit" class="md-raised md-primary">
+                    <?= __('create') ?>
+                </md-button>
+            </md-input-container>
+
+            <?php
             echo $this->Form->end();
             ?>
         </div>
@@ -582,28 +590,33 @@ class ListsHelper extends AppHelper
     public function displaySearchForm($search, $extraHiddenParams = null)
     {
         ?>
-        <div class="module">
+        <div class="section md-whiteframe-1dp">
             <?php
             echo $this->Html->tag('h2', __('Search'));
 
-            echo $this->Form->create('SentencesList', array('type' => 'get'));
+            echo $this->Form->create('SentencesList', ['type' => 'get']);
 
             if (!empty($extraHiddenParams)) {
                 foreach ($extraHiddenParams as $key => $value) {
                     echo $this->Form->hidden($key, array('value' => $value));
                 }
             }
-
-            echo $this->Form->input(
-                'search',
-                array(
+            ?>
+            
+            <md-input-container layout="column">
+                <?php
+                echo $this->Form->input('search', [
                     'value' => $search,
                     'label' => false
-                )
-            );
+                ]);
+                ?>
+                
+                <md-button type="submit" class="md-raised">
+                    <?= __('Search') ?>
+                </md-button>
+            </md-input-container>
 
-            echo $this->Form->submit(__('Search'));
-
+            <?php
             echo $this->Form->end();
             ?>
         </div>
@@ -613,47 +626,47 @@ class ListsHelper extends AppHelper
     public function displayListsLinks()
     {
         ?>
-        <div class="module">
+        <md-list class="annexe-menu md-whiteframe-1dp" ng-cloak>
+            <md-subheader><?= __('Lists') ?></md-subheader>
+            
             <?php
-            echo $this->Html->tag('h2', __('Lists'));
-            echo '<ul class="annexeMenu">';
-
-            echo '<li class="item">';
-            $listScope = __('All public lists');
-            echo $this->Html->link(
-                $listScope,
-                array(
-                    'controller' => 'sentences_lists',
-                    'action' => 'index'
-                )
-            );
-            echo '</li>';
-
-            echo '<li class="item">';
-            echo $this->Html->link(
-                __('Collaborative lists'),
-                array(
-                    'controller' => 'sentences_lists',
-                    'action' => 'collaborative'
-                )
-            );
-            echo '</li>';
-
-            if (CurrentUser::isMember()) {
-                echo '<li class="item">';
-                echo $this->Html->link(
-                    __('My lists'),
-                    array(
-                        'controller' => 'sentences_lists',
-                        'action' => 'of_user',
-                        CurrentUser::get('username')
-                    )
-                );
-                echo '</li>';
-            }
-            echo '</ul>';
+            $url = $this->Url->build([
+                'controller' => 'sentences_lists',
+                'action' => 'index'
+            ]);
             ?>
-        </div>
+            <md-list-item href="<?= $url ?>">
+                <md-icon>keyboard_arrow_right</md-icon>
+                <p><?= __('All public lists') ?></p>
+            </md-list-item>
+
+            <?php
+            $url = $this->Url->build([
+                'controller' => 'sentences_lists',
+                'action' => 'collaborative'
+            ]);
+            ?>
+            <md-list-item href="<?= $url ?>">
+                <md-icon>keyboard_arrow_right</md-icon>
+                <p><?= __('Collaborative lists') ?></p>
+            </md-list-item>
+
+            <?php
+            if (CurrentUser::isMember()) {
+                $url = $this->Url->build([
+                    'controller' => 'sentences_lists',
+                    'action' => 'of_user',
+                    CurrentUser::get('username')
+                ]);
+                ?>
+                <md-list-item href="<?= $url ?>">
+                    <md-icon>keyboard_arrow_right</md-icon>
+                    <p><?= __('My lists') ?></p>
+                </md-list-item>
+                <?php
+            }
+            ?>
+        </md-list>
         <?php
     }
 

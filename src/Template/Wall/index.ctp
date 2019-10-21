@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 /**
@@ -32,7 +32,7 @@
  * @package  Views
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $this->set('title_for_layout', $this->Pages->formatTitle(__('Wall')));
@@ -126,7 +126,7 @@ echo $this->Html->script('wall.show_and_hide_replies.js', array('block' => 'scri
             <?php
             $threadsCount = $this->Paginator->param('count');
             echo format(__n('Wall (one thread)', 'Wall ({n}&nbsp;threads)', $threadsCount),
-                        array('n' => $threadsCount));
+                        array('n' => $this->Number->format($threadsCount)));
             ?>
         </h2>
 

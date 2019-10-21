@@ -25,7 +25,7 @@ class SentencesListsFixture extends TestFixture {
 			'id' => '1',
 			'name' => 'Interesting French sentences',
 			'user_id' => 7,
-			'numberOfSentences' => 2,
+			'numberOfSentences' => 3,
 			'created' => '2014-04-15 00:54:01',
 			'modified' => '2014-04-15 00:54:12',
 			'visibility' => 'unlisted',
@@ -60,6 +60,16 @@ class SentencesListsFixture extends TestFixture {
 			'modified' => '2018-10-10 10:10:09',
 			'visibility' => 'private',
 			'editable_by' => 'creator'
+		),
+		array(
+			'id' => '5',
+			'name' => 'Collaborative list',
+			'user_id' => 1,
+			'numberOfSentences' => 0,
+			'created' => '2018-10-10 10:10:01',
+			'modified' => '2018-10-10 10:10:09',
+			'visibility' => 'public',
+			'editable_by' => 'anyone'
 		),
 	);
 }

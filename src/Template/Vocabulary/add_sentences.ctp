@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 ?>
 <?php
@@ -40,7 +40,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
 </div>
 
 <div id="main_content" ng-controller="VocabularyAddSentencesController as ctrl">
-    <div class="section" md-whiteframe="1">
+    <div class="section md-whiteframe-1dp">
         <h2><?= $title ?></h2>
 
         <p>

@@ -282,6 +282,16 @@ html[dir="rtl"] .comment.sentence .text {
     color: #d50000;
 }
 
+.comment.form .content{
+    background: #f1f1f1;
+}
+.comment.form .md-subhead {
+    cursor: initial;
+}
+.comment.form textarea {
+    width: 100%;
+}
+
 /*
  * --------------------------------------------------------------------
  *
@@ -546,65 +556,6 @@ html[dir="rtl"] .comment.sentence .text {
 
 .message.form .body, .message.form .avatar {
     background-color: #f1f1f1;
-}
-
-
-/*
- * --------------------------------------------------------------------
- *
- *   navigation.css
- *
- * --------------------------------------------------------------------
- */
-
-/*
- * Navigation links (previous, next, random)
- */
-.navigation {
-    margin: 40px 20px 10px 20px;
-}
-
-.navigation .options {
-    display: inline;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navigation .options li {
-    display: inline;
-    padding: 3px 6px;
-    margin-right: 10px;
-}
-
-.navigation .active {
-    background: #D3F3B9;
-}
-
-.navigation .active a{
-    color: #257D0C;
-}
-
-.navigation .inactive {
-    color: #849684;
-    background: #F1F1F1;
-}
-
-
-/*
- * Navigation "go to" form
- */
-#SentenceGoToSentenceForm {
-    float: right;
-}
-
-#SentenceGoToSentenceForm input#sentence-id {
-    width: 80px;
-    text-align: right;
-}
-
-#SentenceGoToSentenceForm div.submit, #SentenceGoToSentenceForm div.input, #UserSearchForm div.submit, #UserSearchForm div.input {
-    display: inline;
 }
 
 
@@ -896,7 +847,7 @@ html[dir="rtl"] .comment.sentence .text {
 }
 
 .sentence .content.column.remove {
-    width: 532px;
+    width: 515px;
 }
 
 
@@ -1278,12 +1229,16 @@ input.sentenceId {
     height: 20px;
 }
 
-.audioAvailable {
+.audioButton.audioAvailable {
     background: url(../../img/audio.svg);
 }
 
-.audioUnavailable {
+.audioButton.audioUnavailable {
     background: url(../../img/audio-unavailable.svg);
+    opacity: 0.3;
+}
+
+.md-icon-button.audioUnavailable {
     opacity: 0.3;
 }
 
@@ -1446,6 +1401,10 @@ div.hideLink {
 
 .stat img {
     float: left;
+}
+
+.sentences-stats p {
+    padding-left: 10px;
 }
 
 
@@ -1650,7 +1609,7 @@ div.hideLink {
     border-right: 1px solid #DDD;
     background: #FFE684;
     padding: 2px 8px;
-    margin: 5px;
+    margin: 2px 0;
     border-radius: 5px;
 }
 
@@ -1725,9 +1684,12 @@ div.hideLink {
     margin-bottom: 20px;
 }
 
-
 .warning-add-language {
     text-align: right;
+}
+
+#annexe_content .language-selector {
+    width: 99%;
 }
 
 
@@ -1755,7 +1717,6 @@ div.hideLink {
 }
 
 .listSummary .name {
-    font-size: 1.2em;
     min-width: 250px;
 }
 
@@ -1856,3 +1817,22 @@ div.hideLink {
     border-width: 8px;
 }
 
+
+/*
+ * --------------------------------------------------------------------
+ *
+ *   Menu in sidebar
+ *
+ * --------------------------------------------------------------------
+ */
+
+.annexe-menu {
+    padding: 0;
+    margin-bottom: 20px;
+}
+.annexe-menu md-list-item:first-of-type {
+    border-top: 1px solid #f1f1f1;
+}
+.annexe-menu md-list-item {
+    border-bottom: 1px solid #f1f1f1;
+}

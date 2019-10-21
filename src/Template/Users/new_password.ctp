@@ -22,7 +22,7 @@
  * @package  Tatoeba
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 /**
@@ -32,7 +32,7 @@
  * @package  Views
  * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
  * @license  Affero General Public License
- * @link     http://tatoeba.org
+ * @link     https://tatoeba.org
  */
 
 $this->set('title_for_layout', $this->Pages->formatTitle(__('Send new password')));
@@ -40,7 +40,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle(__('Send new password')
 $this->Security->enableCSRFProtection();
 ?>
 
-<div md-whiteframe="1" id="reset-form">
+<div id="reset-form" class="md-whiteframe-1dp">
     <h2><?= __('Send new password'); ?></h2>
     <?= $this->Form->create('User', array(
             "ng-cloak" => true,

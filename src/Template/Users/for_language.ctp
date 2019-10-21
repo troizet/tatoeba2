@@ -22,7 +22,7 @@
 * @package  Tatoeba
 * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
 * @license  Affero General Public License
-* @link     http://tatoeba.org
+* @link     https://tatoeba.org
 */
 
 /**
@@ -32,7 +32,7 @@
 * @package  Views
 * @author   HO Ngoc Phuong Trang <tranglich@gmail.com>
 * @license  Affero General Public License
-* @link     http://tatoeba.org
+* @link     https://tatoeba.org
 */
 $title = format(
     __('Members: {lang}'),
@@ -69,7 +69,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
                     $langCode
                 )
             );
-            $total = $language[0]['total'];
+            $total = $language->total;
             $selected = '';
             if ($lang == $langCode) {
                 $selected = 'selected';
@@ -78,7 +78,7 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
             echo '<tr class="'.$selected.'">';
             echo $this->Html->tag('td', $this->Languages->icon($langCode, array()));
             echo $this->Html->tag('td', $langName);
-            echo $this->Html->tag('td', $total);
+            echo $this->Html->tag('td', $this->Number->format($total));
             echo '</tr>';
         }
         ?>
@@ -93,7 +93,8 @@ $this->set('title_for_layout', $this->Pages->formatTitle($title));
         $total = $this->Paginator->param('count');
         $title = format(
             __n('{lang} ({total} member)', '{lang} ({total} members)', $total),
-            array('lang' => $this->Languages->codeToNameAlone($lang), 'total' => $total)
+            array('lang' => $this->Languages->codeToNameAlone($lang),
+                  'total' => $this->Number->format($total))
         );
         ?>
         <h2><?php echo $title; ?></h2>
